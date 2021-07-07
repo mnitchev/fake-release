@@ -1,0 +1,275 @@
+• Failure [40.351 seconds]
+
+Lifecycle
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/lifecycle_test.go:26
+
+  running a process
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/lifecycle_test.go:195
+
+    collects the process's full output, even if it exits quickly after [It]
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/lifecycle_test.go:547
+
+
+    Got stuck at:
+
+    Waiting for:
+
+        hi stdout
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/lifecycle_test.go:561
+
+---
+• Failure [5.152 seconds]
+
+Security
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:13
+
+  by default (unprivileged)
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:367
+
+    with a docker image
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:482
+
+      sees the /dev/pts and /dev/ptmx as owned by the container's root user [It]
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:499
+
+
+      Got stuck at:
+
+      Waiting for:
+
+           root
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:508
+---
+• Failure [7.115 seconds]
+
+Security
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:13
+
+  Users and groups
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:201
+
+    when running a command as a non-root user
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:231
+
+      when env is set in the spec
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:268
+
+        sets env from the spec [It]
+
+        /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:269
+
+
+        Got stuck at:
+
+        Waiting for:
+
+            USER=nobody
+
+        /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:278
+
+---
+• Failure [5.537 seconds]
+
+Devices
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/devices_test.go:14
+
+  Devices
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/devices_test.go:15
+
+    should have the urandom device [It]
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/devices_test.go:27
+
+
+    Got stuck at:
+
+
+    Waiting for:
+
+        1,\s*9
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/devices_test.go:22
+
+---
+• Failure [15.253 seconds]
+
+Lifecycle
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/lifecycle_test.go:26
+
+  running a process
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/lifecycle_test.go:195
+
+    collects the process's full output, even if it exits quickly after [It]
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/lifecycle_test.go:547
+
+
+    Got stuck at:
+
+
+    Waiting for:
+
+        hi stdout
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/lifecycle_test.go:561
+
+---
+• Failure [7.517 seconds]
+
+Security
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:13
+
+  by default (unprivileged)
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:367
+
+    with a docker image
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:482
+
+      sees alice-owned files as owned by alice [It]
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:511
+
+
+      Got stuck at:
+
+
+      Waiting for:
+
+           alice
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:518
+
+---
+• Failure [5.101 seconds]
+
+MaskedPaths
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/maskedpaths_test.go:12
+
+  when the container is unprivileged
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/maskedpaths_test.go:13
+
+    masks certain files in /proc with a null character device [It]
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/maskedpaths_test.go:14
+
+
+    Got stuck at:
+
+
+    Waiting for:
+
+        character special file
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/maskedpaths_test.go:26
+
+---
+• Failure [7.955 seconds]
+
+Security
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:13
+
+  Users and groups
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:201
+
+    when running a command as a non-root user
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:231
+
+      executes in the user's home directory [It]
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:283
+
+
+      Got stuck at:
+
+
+      Waiting for:
+
+          /home/alice
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:288
+
+---
+• Failure [3.539 seconds]
+
+Process
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/process_test.go:14
+
+  user
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/process_test.go:180
+
+    when the user is specified in the form uid:gid
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/process_test.go:181
+
+      runs the process as that user [It]
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/process_test.go:182
+
+
+      Got stuck at:
+
+
+      Waiting for:
+
+          1001:1002
+
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/process_test.go:188
+
+---
+• Failure [2.357 seconds]
+
+Security
+
+/tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:13
+
+  File system
+
+  /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:61
+
+    in a privileged container
+
+    /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:134
+
+      /sys IS mounted as Read-Only [It]
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:148
+
+
+      Got stuck at:
+
+
+      Waiting for:
+
+          sysfs /sys sysfs ro
+
+
+      /tmp/build/324b68d3/gr-release-develop/src/garden-integration-tests/security_test.go:154
+
